@@ -9,5 +9,6 @@ export function loadFiles() {
     store.LOG_FILE_NAME = LOG_FILE_NAME;
 
     loadFile('countries', 'countries', true);
-    loadFile('natural-resources', 'naturalResources');
+    loadFile('persons', 'persons');
+    loadFile('government-offices', 'govOffices');
 };

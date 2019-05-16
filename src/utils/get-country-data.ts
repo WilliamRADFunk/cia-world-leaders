@@ -7,16 +7,13 @@ import { CountryReference } from "../models/country-reference";
 import { dataScrapers } from '../scrapers/data-getters';
 import { countryToId } from './country-to-id';
 
-const numberOfScrapers: number = Object.keys(dataScrapers).length;
-
 export function getCountryData(country: CountryReference, url: string): any {
     if (country && url) {
         return rp(url, { timeout: consts.BASE.DATA_REQUEST_TIMEOUT })
             .then((html) => {
                 const $ = cheerio.load(html);
                 const countryId = countryToId(country.name);
-                dataScrapers.getNaturalResources($, country.name, countryId);
-                store.progressLogger(country.name, 1 / numberOfScrapers);
+                dataScrapers.getLeaders($, country.name, countryId);
                 store.debugLogger(`Data scrape for ${country.name} is complete`);
             })
             .catch(err => {

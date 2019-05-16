@@ -1,5 +1,5 @@
-import { getNaturalResources } from './natural-resources';
+import { getLeaders } from './leaders';
 
 export const dataScrapers = {
-	getNaturalResources
+	getLeaders
 };

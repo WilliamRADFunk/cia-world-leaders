@@ -6,9 +6,7 @@
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY wfact "http://williamrobertfunk.com/ontologies/world-factbook#" >
     <!ENTITY wleaders "http://williamrobertfunk.com/ontologies/world-leaders#" >
-    <!ENTITY pos "http://www.w3.org/2003/01/geo/wgs84_pos#">
-    <!ENTITY dafu "http://www.daedafusion.com/">
-    <!ENTITY dbp "http://dbpedia.org/ontology/">
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
     <!ENTITY blade "http://modusoperandi.com/ont/blade#">
 ]>
 
@@ -20,9 +18,7 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:wfact="http://williamrobertfunk.com/ontologies/world-factbook#"
   xmlns:wleaders="http://williamrobertfunk.com/ontologies/world-leaders#"
-  xmlns:pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
-  xmlns:dafu="http://www.daedafusion.com/"
-  xmlns:dbp="http://dbpedia.org/ontology"
+  xmlns:foaf="http://xmlns.com/foaf/0.1"
   xmlns:blade="http://modusoperandi.com/ont/blade#">
 
   <Ontology rdf:about="http://williamrobertfunk.com/ontologies/world-leaders">
@@ -45,13 +41,25 @@
   ///////////////////////////////////////////////////////////////////////////////////////
   -->
 
-  <!-- http://williamrobertfunk.com/ontologies/world-leaders#Country -->
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice -->
 
-  <Class rdf:about="&wleaders;Country">
-    <rdfs:label>Country</rdfs:label>
-    <rdfs:comment>a nation with its own government, occupying a particular territory.</rdfs:comment>
+  <Class rdf:about="&wleaders;GovernmentOffice">
+    <rdfs:label>Government Office</rdfs:label>
+    <rdfs:comment>
+      a title or position in a governing body with a specific set of roles, responsibilities, and authority.
+    </rdfs:comment>
     <blade:navClass rdf:datatype="&xsd;boolean">true</blade:navClass>
-    <equivalentClass rdf:resource="&dbp;Country" />
+  </Class>
+
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#Person -->
+
+  <Class rdf:about="&wleaders;Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:comment>
+      a human being regarded as an individual.
+    </rdfs:comment>
+    <blade:navClass rdf:datatype="&xsd;boolean">true</blade:navClass>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person" />
   </Class>
 
   <!--
@@ -62,11 +70,31 @@
   ///////////////////////////////////////////////////////////////////////////////////////
   -->
 
-  <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasCountry -->
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice -->
 
-  <ObjectProperty rdf:about="&wleaders;hasCountry">
-      <rdfs:domain rdf:resource="&wleaders;BorderCountryPair"/>
-      <rdfs:range rdf:resource="&wleaders;Country"/>
+  <ObjectProperty rdf:about="&wleaders;hasGovernmentOffice">
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
+    <rdfs:range rdf:resource="&wfact;Country"/>
+  </ObjectProperty>
+  
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOfficial -->
+
+  <ObjectProperty rdf:about="&wleaders;hasGovernmentOfficial">
+    <rdfs:comment>
+      a person serving a governing body in the capacity outlined by the government office to which they are employed.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="&wleaders;Person"/>
+    <rdfs:range rdf:resource="&wleaders;GovernmentOffice"/>
+  </ObjectProperty>
+  
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#appointedGovernmentOffice -->
+
+  <ObjectProperty rdf:about="&wleaders;appointedGovernmentOffice">
+    <rdfs:comment>
+      a government office to which this person is appointed.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
+    <rdfs:range rdf:resource="&wleaders;Person"/>
   </ObjectProperty>
 
   <!--
@@ -77,15 +105,15 @@
   ///////////////////////////////////////////////////////////////////////////////////////
   -->
 
-  <!-- http://williamrobertfunk.com/ontologies/world-leaders#countryCodeISO -->
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#title -->
 
-  <DatatypeProperty rdf:about="&wleaders;countryCodeISO">
-    <rdfs:label>ISO Country Code</rdfs:label>
+  <DatatypeProperty rdf:about="&wleaders;title">
+    <rdfs:label>Title</rdfs:label>
     <rdfs:comment>
-      Two digit country code assigned by the International Organization for Standardization
+      The official name of the government office
     </rdfs:comment>
     <rdf:type rdf:resource="&owl;FunctionalProperty" />
-    <rdfs:domain rdf:resource="&wleaders;Country"/>
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
     <rdfs:range rdf:resource="&xsd;string"/>
   </DatatypeProperty>
 

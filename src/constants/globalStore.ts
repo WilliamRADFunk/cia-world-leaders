@@ -15,6 +15,8 @@ class GlobalStore {
 	public failedCountries: CountryReference[] = [];
 
 	public countries: EntityListWrapper = {};
+	public govOffices: EntityListWrapper = {};
+	public persons: EntityListWrapper = {};
 }
 
 export const store = new GlobalStore();

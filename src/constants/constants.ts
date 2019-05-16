@@ -1,16 +1,7 @@
 const MAIN_INSTANCE_PATH = 'http://williamrobertfunk.com/instance/';
 const COUNTRY_ONT_PATH = 'http://williamrobertfunk.com/ontologies/world-factbook#';
 const MAIN_ONT_PATH = 'http://williamrobertfunk.com/ontologies/world-leaders#';
-const GEO_ONT_PATH = 'http://www.w3.org/2003/01/geo/wgs84_pos#';
-const WGS84_POS = {
-	ALT: GEO_ONT_PATH + 'alt',
-	LAT: GEO_ONT_PATH + 'lat',
-	LAT_LONG: GEO_ONT_PATH + 'lat_long',
-	LOCATION: GEO_ONT_PATH + 'location',
-	LONG: GEO_ONT_PATH + 'long',
-	POINT: GEO_ONT_PATH + 'Point',
-	SPATIAL_THING: GEO_ONT_PATH + 'SpatialThing'
-};
+const FOAF_ONT_PATH = 'http://xmlns.com/foaf/0.1/';
 
 const BASE = {
 	COUNTRY_BLACKLIST: [
@@ -19,17 +10,24 @@ const BASE = {
 	],
 	DATA_REQUEST_TIMEOUT: 40000,
 	URL_BASE: 'https://www.cia.gov/library/publications/the-world-factbook/',
-	URL_COUNTRY_BASE: 'https://www.cia.gov/library/publications/the-world-factbook/geos/',
 	URL_LEADER_BASE: 'https://www.cia.gov/library/publications/resources/world-leaders-1/'
 };
 
 const ONTOLOGY = {
 	// Ontology definition paths for (predicate) datatype properties
+	DT_FIRST_NAME: FOAF_ONT_PATH + 'firstName',
 	DT_ISO_CODE: COUNTRY_ONT_PATH + 'countryCodeISO',
+	DT_LAST_NAME: FOAF_ONT_PATH + 'lastName',
+	DT_TITLE: MAIN_ONT_PATH + 'title',
 	// Ontology definition paths for (predicate) object/relation properties
+	HAS_APPOINTED_GOVERNMENT_OFFICE: MAIN_ONT_PATH + 'appointedGovernmentOffice',
 	HAS_COUNTRY: COUNTRY_ONT_PATH + 'hasCountry',
+	HAS_GOVERNMENT_OFFICE: MAIN_ONT_PATH + 'hasGovernmentOffice',
+	HAS_GOVERNMENT_OFFICIAL: MAIN_ONT_PATH + 'hasGovernmentOfficial',
 	// Instance definition paths
 	INST_COUNTRY: MAIN_INSTANCE_PATH + 'Country/',
+	INST_GOVERNMENT_OFFICE: MAIN_INSTANCE_PATH + 'GovernmentOffice/',
+	INST_PERSON: MAIN_INSTANCE_PATH + 'Person/',
 	// Base path for all things instance definition
 	MAIN_INSTANCE_PATH,
 	// Base path for all things ontology definition
@@ -45,7 +43,6 @@ class Constants {
 	public BASE = BASE;
 	public ONTOLOGY = ONTOLOGY;
 	public RDFS = RDFS;
-	public WGS84_POS = WGS84_POS;
 };
 
 export const consts = new Constants();

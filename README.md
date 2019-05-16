@@ -1,5 +1,5 @@
-# factbook
-(In Progress) Serves as an independent data scraping module, complete with ontology and full scraping ability.
+# world-leaders
+(In Progress) Serves as an independent data scraping module, complete with ontology and full scraping ability for the CIA World Leaders site.
 
 Also serves as child module for the larger [data-glutton](https://github.com/WilliamRADFunk/data-glutton.git), which culminates data from multiple locations and bridges them under a universal ontology.
 
@@ -13,19 +13,19 @@ If you want the most recent data possible, follow the instruction below to run t
 
 ***
 
-## Using Factbook
+## Using World Leaders
 
 ### 1. Clone the repo
 
-Run `git clone https://github.com/WilliamRADFunk/factbook.git` from the folder level you want factbook to be created.
+Run `git clone https://github.com/WilliamRADFunk/world-leaders.git` from the folder level you want world-leaders to be created.
 
-### 2. Navigate to Factbook
+### 2. Navigate to World Leaders
 
-Enter into the root level of factbook. Typically done by using the command `cd factbook`.
+Enter into the root level of world-leaders. Typically done by using the command `cd world-leaders`.
 
 ### 3. Install dependencies
 
-Run the command `npm install` and wait for npm to finish installing all the packages factbook needs.
+Run the command `npm install` and wait for npm to finish installing all the packages world-leaders needs.
 
 ### 4. Scrape the data
 
