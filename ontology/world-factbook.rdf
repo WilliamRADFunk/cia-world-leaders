@@ -1,0 +1,92 @@
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY wfact "http://williamrobertfunk.com/ontologies/world-factbook#" >
+    <!ENTITY wleaders "http://williamrobertfunk.com/ontologies/world-leaders#" >
+    <!ENTITY pos "http://www.w3.org/2003/01/geo/wgs84_pos#">
+    <!ENTITY dafu "http://www.daedafusion.com/">
+    <!ENTITY dbp "http://dbpedia.org/ontology/">
+    <!ENTITY blade "http://modusoperandi.com/ont/blade#">
+]>
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wfact="http://williamrobertfunk.com/ontologies/world-factbook#"
+  xmlns:wleaders="http://williamrobertfunk.com/ontologies/world-leaders#"
+  xmlns:pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:dafu="http://www.daedafusion.com/"
+  xmlns:dbp="http://dbpedia.org/ontology"
+  xmlns:blade="http://modusoperandi.com/ont/blade#">
+
+  <Ontology rdf:about="http://williamrobertfunk.com/ontologies/world-leaders">
+    <versionInfo rdf:datatype="&xsd;decimal">1.0</versionInfo>
+    <dc:rights>Copyright 2019 William R.A.D. Funk. All rights reserved.</dc:rights>
+    <dc:creator>William R.A.D. Funk</dc:creator>
+    <dc:contributor>William R.A.D. Funk</dc:contributor>
+    <rdfs:comment>
+      Identifies application specific classes and annotations that are relevant
+      only to my associated applications.
+    </rdfs:comment>
+    <rdfs:label>Funk Ontology</rdfs:label>
+  </Ontology>
+
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////
+  //
+  // Classes
+  //
+  ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#Country -->
+
+  <Class rdf:about="&wleaders;Country">
+    <rdfs:label>Country</rdfs:label>
+    <rdfs:comment>a nation with its own government, occupying a particular territory.</rdfs:comment>
+    <blade:navClass rdf:datatype="&xsd;boolean">true</blade:navClass>
+    <equivalentClass rdf:resource="&dbp;Country" />
+  </Class>
+
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////
+  //
+  // Object Properties
+  //
+  ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasCountry -->
+
+  <ObjectProperty rdf:about="&wleaders;hasCountry">
+      <rdfs:domain rdf:resource="&wleaders;BorderCountryPair"/>
+      <rdfs:range rdf:resource="&wleaders;Country"/>
+  </ObjectProperty>
+
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////
+  //
+  // Datatype Properties
+  //
+  ///////////////////////////////////////////////////////////////////////////////////////
+  -->
+
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#countryCodeISO -->
+
+  <DatatypeProperty rdf:about="&wleaders;countryCodeISO">
+    <rdfs:label>ISO Country Code</rdfs:label>
+    <rdfs:comment>
+      Two digit country code assigned by the International Organization for Standardization
+    </rdfs:comment>
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:domain rdf:resource="&wleaders;Country"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </DatatypeProperty>
+
+</rdf:RDF>
