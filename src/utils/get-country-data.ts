@@ -17,17 +17,21 @@ export function getCountryData(country: CountryReference, url: string): any {
                 store.debugLogger(`Data scrape for ${country.name} is complete`);
             })
             .catch((err: Response) => {
-                store.debugLogger(err && err['statusCode']);
+                let errMsg;
                 if (err && err['statusCode'] === 404) {
                     store.countriesNotFound.push(country.name);
+                    errMsg = `${
+                        new Date().toISOString()
+                    }\n\nIndividual country query failed:  ${
+                    country.name}\n${url}\nNot Found (404)\n\n`;
                 } else {
                     store.failedCountries.push(country);
-                    const errMsg = `${
+                    errMsg = `${
                         new Date().toISOString()
                     }\n\nIndividual country query failed:  ${
                     country.name}\n${url}\n${err.toString().trim()}\n\n`;
-                    store.errorLogger(errMsg);
                 }
+                store.errorLogger(errMsg);
             });
     } else {
         return new Promise(resolve => {
