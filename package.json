@@ -16,8 +16,8 @@
     "copy:owl": "copyfiles -u 1 ontology/*.rdf dist/ontology/owl/",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "scrape": "ts-node src/index.ts -- --max-old-space-size=16000",
-    "start": "run-s clean:logs clean:dist scrape copy:ontology zip -- --recurse-directories=false",
+    "scrape": "ts-node src/index.ts",
+    "start": "run-s clean:logs clean:dist scrape copy:ontology",
     "test": "echo \"Error: no test specified\" && exit 1",
     "zip": "bestzip dist/images.zip dist/images/*"
   },
@@ -51,7 +51,6 @@
     "@types/cheerio": "^0.22.11",
     "@types/graceful-fs": "^4.1.3",
     "@types/request-promise": "^4.1.42",
-    "bestzip": "^2.1.2",
     "bluebird": "^3.5.4",
     "cheerio": "^1.0.0-rc.2",
     "copyfiles": "^2.1.0",

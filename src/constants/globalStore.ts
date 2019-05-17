@@ -9,6 +9,7 @@ class GlobalStore {
 	public LOG_FILE_NAME: string = '';
 	public LOG_STREAM: any = null;
 	public countriesInList: CountryReference[] = [];
+	public countriesNotFound: string[] = [];
 	public debugLogger: any = consoleLog;
 	public errorLogger: any = consoleError;
 	public progressLogger: any = noop;

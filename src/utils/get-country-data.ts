@@ -16,13 +16,18 @@ export function getCountryData(country: CountryReference, url: string): any {
                 dataScrapers.getLeaders($, country.name, countryId);
                 store.debugLogger(`Data scrape for ${country.name} is complete`);
             })
-            .catch(err => {
-                store.failedCountries.push(country);
-                const errMsg = `${
-                    new Date().toISOString()
-                }\n\nIndividual country query failed:  ${
-                country.name}\n${url}\n${err.toString().trim()}\n\n`;
-                store.errorLogger(errMsg);
+            .catch((err: Response) => {
+                store.debugLogger(err && err['statusCode']);
+                if (err && err['statusCode'] === 404) {
+                    store.countriesNotFound.push(country.name);
+                } else {
+                    store.failedCountries.push(country);
+                    const errMsg = `${
+                        new Date().toISOString()
+                    }\n\nIndividual country query failed:  ${
+                    country.name}\n${url}\n${err.toString().trim()}\n\n`;
+                    store.errorLogger(errMsg);
+                }
             });
     } else {
         return new Promise(resolve => {
