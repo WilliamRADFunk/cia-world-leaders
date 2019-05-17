@@ -1,4 +1,9 @@
+import * as getUuid from 'uuid-by-string';
+
+import { consts } from '../constants/constants';
 import { store } from '../constants/globalStore';
+import { entityMaker } from '../utils/entity-maker';
+import { entityRefMaker } from '../utils/entity-ref-maker';
 
 export function getLeaders(cheerioElem: CheerioSelector, country: string, countryId: string) {
 	// Checking to see if country has the section needed before continuing.
@@ -9,8 +14,6 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
     if (bailOut) {
         return;
 	}
-	
-	const objectProperties = store.countries[countryId].objectProperties;
 	
 	cheerioElem('#countryOutput ul li #chiefsOutput > div').each((index: number, element: CheerioElement) => {
 		const personName = cheerioElem(element.lastChild).find('span > span').text();
@@ -52,6 +55,53 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 		if (!officeName) {
 			return;
 		}
-		store.debugLogger(`${officeName}, ${personName}`);
+		// Fetch or create office entity
+		const officeId = consts.ONTOLOGY.INST_COUNTRY + getUuid(country) + '-' + getUuid(officeName);
+		let govObjectProp = {};
+		if (!!store.govOffices[officeId]) {
+			govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE] = store.govOffices[officeId];
+		} else {
+			govObjectProp = entityMaker(
+				consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE,
+				consts.ONTOLOGY.ONT_GOVERNMENT_OFFICE,
+				officeId,
+				`The Office of ${officeName} (${country})`);
+			store.govOffices[officeId] = govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE];
+		}
+		govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE].datatypeProperties[consts.ONTOLOGY.DT_TITLE] = officeName;
+		store.countries[countryId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE, govObjectProp));
+
+		// Parse name into first and last based on apparent pattern where last name is always all caps.
+		if (personName) {
+			const personNameDelimited = personName.trim().split(' ');
+			let lastNameIndex = 0;
+			const regExp = new RegExp('[A-Z]');
+			personNameDelimited.forEach((val: string, index: number) => {
+				// TODO: Find cleaner way to achieve this last name parsing.
+				// TODO: Handle Last names with apostrophes. ie. D'ANGELO
+				if (!lastNameIndex && val && val.charAt(0).match(regExp) && val.charAt(1).match(regExp)) {
+					lastNameIndex = index;
+				}
+			});
+			const firstName = personNameDelimited.slice(0, lastNameIndex).join(' ');
+			const lastName = personNameDelimited.slice(lastNameIndex).join(' ');
+
+			// If name present fetch or create the associated entity
+			const personId = consts.ONTOLOGY.INST_COUNTRY + getUuid(country) + '-' + getUuid(personName);
+			let perObjectProp = {};
+			if (!!store.persons[personId]) {
+				perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL] = store.persons[personId];
+			} else {
+				perObjectProp = entityMaker(
+					consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL,
+					consts.ONTOLOGY.ONT_PERSON,
+					personId,
+					`${personName}`);
+				store.persons[personId] = perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL];
+			}
+			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_FIRST_NAME] = firstName;
+			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_LAST_NAME] = lastName;
+			store.govOffices[officeId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL, perObjectProp));
+		}		
     });
 };

@@ -34,6 +34,8 @@ const ONTOLOGY = {
 	MAIN_ONT_PATH,
 	// Ontology class definition paths
 	ONT_COUNTRY: COUNTRY_ONT_PATH + 'Country',
+	ONT_GOVERNMENT_OFFICE: MAIN_ONT_PATH + 'GovernmentOffice',
+	ONT_PERSON: MAIN_ONT_PATH + 'Person',
 };
 
 const RDFS = {
