@@ -19,6 +19,7 @@ const ONTOLOGY = {
 	DT_ISO_CODE: COUNTRY_ONT_PATH + 'countryCodeISO',
 	DT_LAST_NAME: FOAF_ONT_PATH + 'lastName',
 	DT_NAME: FOAF_ONT_PATH + 'name',
+	DT_REGION_SPECIFIC: MAIN_ONT_PATH + 'regionSpecific',
 	DT_TITLE: MAIN_ONT_PATH + 'title',
 	// Ontology definition paths for (predicate) object/relation properties
 	HAS_APPOINTED_GOVERNMENT_OFFICE: MAIN_ONT_PATH + 'appointedGovernmentOffice',

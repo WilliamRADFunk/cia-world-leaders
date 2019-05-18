@@ -117,4 +117,17 @@
     <rdfs:range rdf:resource="&xsd;string"/>
   </DatatypeProperty>
 
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#regionSpecific -->
+
+  <DatatypeProperty rdf:about="&wleaders;regionSpecific">
+    <rdfs:label>Region Specific</rdfs:label>
+    <rdfs:comment>
+      Specific Region to which the government office applies
+      (ie. "Chief Executive" in China for Hong Kong, or Macau).
+    </rdfs:comment>
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </DatatypeProperty>
+
 </rdf:RDF>

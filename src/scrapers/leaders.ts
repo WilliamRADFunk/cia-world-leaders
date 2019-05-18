@@ -14,10 +14,21 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
     if (bailOut) {
         return;
 	}
-	
+	// Some countries have duplicate titles that differentiated by the region they govern.
+	// This captures the change so that an ontological note can be added for those specific offices.
+	let specificRegion;
 	cheerioElem('#countryOutput ul li #chiefsOutput > div').each((index: number, element: CheerioElement) => {
+		// Capture a region specific header change.
+		const regionName = cheerioElem(element).find('strong').text().trim();
+		specificRegion = regionName ? regionName : (specificRegion || '');
+		if (regionName) {
+			specificRegion = specificRegion
+				.replace('Admin.', 'Administrative')
+				.replace('Govt.', 'Government');
+		}
+		// Captures names of office and person appointed to that office.
 		const personName = cheerioElem(element.lastChild).find('span > span').text().trim();
-		const officeName = cheerioElem(element).find('div > span > span').text()
+		const officeName = cheerioElem(element).find('div > span > span').text().trim()
 			.replace(personName, '')
 			.replace('Min.-Del.', 'Minister-Delegate')
 			.replace('Min.-Del', 'Minister-Delegate')
@@ -69,6 +80,10 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			store.govOffices[officeId] = govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE];
 		}
 		govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE].datatypeProperties[consts.ONTOLOGY.DT_TITLE] = officeName;
+		// Only add the region specific ontological note if there was one. Most countries don't have any.
+		if (specificRegion) {
+			govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE].datatypeProperties[consts.ONTOLOGY.DT_REGION_SPECIFIC] = specificRegion;
+		}
 		store.countries[countryId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE, govObjectProp));
 
 		// Parse name into first and last based on apparent pattern where last name is always all caps.
