@@ -13,19 +13,6 @@
   },
   "@graph": [
     {
-      "@id": "http://williamrobertfunk.com/ontologies/world-leaders",
-      "@type": "owl:Ontology",
-      "dc:contributor": "William R.A.D. Funk",
-      "dc:creator": "William R.A.D. Funk",
-      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
-      "owl:versionInfo": {
-        "@type": "xsd:decimal",
-        "@value": "1.0"
-      },
-      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
-      "rdfs:label": "Funk Ontology"
-    },
-    {
       "@id": "wleaders:GovernmentOffice",
       "@type": "owl:Class",
       "blade:navClass": true,
@@ -80,6 +67,21 @@
       }
     },
     {
+      "@id": "wleaders:regionSpecific",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": "\n      Specific Region to which the government office applies\n      (ie. \"Chief Executive\" in China for Hong Kong, or Macau).\n    ",
+      "rdfs:domain": {
+        "@id": "wleaders:GovernmentOffice"
+      },
+      "rdfs:label": "Region Specific",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
       "@id": "wleaders:Person",
       "@type": "owl:Class",
       "blade:navClass": true,
@@ -88,6 +90,19 @@
       },
       "rdfs:comment": "\n      a human being regarded as an individual.\n    ",
       "rdfs:label": "Person"
+    },
+    {
+      "@id": "http://williamrobertfunk.com/ontologies/world-leaders",
+      "@type": "owl:Ontology",
+      "dc:contributor": "William R.A.D. Funk",
+      "dc:creator": "William R.A.D. Funk",
+      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
+      "owl:versionInfo": {
+        "@type": "xsd:decimal",
+        "@value": "1.0"
+      },
+      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
+      "rdfs:label": "Funk Ontology"
     }
   ]
 }
