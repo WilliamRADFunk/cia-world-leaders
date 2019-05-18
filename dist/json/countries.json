@@ -2186,10 +2186,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/f3a82610-1b9a-37f3-973c-b0f1a7505587-d4652c5e-d960-37ce-9b09-60aa6a8eae2b",
+          "@id": "http://williamrobertfunk.com/instance/Country/f3a82610-1b9a-37f3-973c-b0f1a7505587-72f1be2c-c0f4-3a9e-a4fe-60fcba134f9f",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of President of Central Bank (Aruba)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of President of Central Bank     (Aruba)",
           "objectProperties": [          ]
         }
       }
@@ -3541,10 +3541,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/3ae11c72-5c30-329d-8d34-18bc6b30789f-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/3ae11c72-5c30-329d-8d34-18bc6b30789f-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Bahrain)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Bahrain)",
           "objectProperties": [          ]
         }
       }
@@ -4552,10 +4552,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/027a12c2-fc85-3ae8-b70b-07ff536faf28-6be591cc-c052-3211-abc2-da0c18699ea8",
+          "@id": "http://williamrobertfunk.com/instance/Country/027a12c2-fc85-3ae8-b70b-07ff536faf28-92643dfc-8f56-3392-9a14-ae1ee4afdbc7",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Ambassador to the US (Belarus)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Ambassador to the US  (Belarus)",
           "objectProperties": [          ]
         }
       }, 
@@ -5366,10 +5366,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/027ed37f-00fb-3aad-b089-a91f2d52c7b9-078e6705-9fbe-33f0-b04e-010d1ab72551",
+          "@id": "http://williamrobertfunk.com/instance/Country/027ed37f-00fb-3aad-b089-a91f2d52c7b9-06c432d0-3f77-375c-95dd-96c26eec9b1d",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Attorney General (Bermuda)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Attorney General     (Bermuda)",
           "objectProperties": [          ]
         }
       }
@@ -6531,10 +6531,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/180c89bf-50c8-329d-ab45-e49d9dac62fc-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/180c89bf-50c8-329d-ab45-e49d9dac62fc-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Botswana)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Botswana)",
           "objectProperties": [          ]
         }
       }
@@ -9150,10 +9150,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/73a7ddd5-05f2-3e2c-aad1-522e54a79432-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/73a7ddd5-05f2-3e2c-aad1-522e54a79432-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Cameroon)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Cameroon)",
           "objectProperties": [          ]
         }
       }
@@ -11054,10 +11054,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/d2eaf2aa-1512-3659-ae0a-5bae633537c6-dc2a4c8b-2474-3b9c-8bbc-5ef83ef47ff7",
+          "@id": "http://williamrobertfunk.com/instance/Country/d2eaf2aa-1512-3659-ae0a-5bae633537c6-e8ab3cf7-e0c7-37b9-829d-4b6348ac7740",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Commissioner, Independent Commission Against Corruption (China)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Commissioner, Independent Commission Against Corruption     (China)",
           "objectProperties": [          ]
         }
       }
@@ -11939,10 +11939,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/f1d5742d-e90d-3775-b749-36abf0934a05-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/f1d5742d-e90d-3775-b749-36abf0934a05-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Congo, Democratic Republic of the)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Congo, Democratic Republic of the)",
           "objectProperties": [          ]
         }
       }
@@ -12336,10 +12336,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/9cba5482-49f6-3e4a-b2f2-47084a2405a8-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/9cba5482-49f6-3e4a-b2f2-47084a2405a8-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Congo, Republic of the)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Congo, Republic of the)",
           "objectProperties": [          ]
         }
       }
@@ -12499,10 +12499,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/4bacfe25-35ec-3eeb-9a04-a1b85c3a2e0b-078e6705-9fbe-33f0-b04e-010d1ab72551",
+          "@id": "http://williamrobertfunk.com/instance/Country/4bacfe25-35ec-3eeb-9a04-a1b85c3a2e0b-06c432d0-3f77-375c-95dd-96c26eec9b1d",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Attorney General (Cook Islands)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Attorney General     (Cook Islands)",
           "objectProperties": [          ]
         }
       }
@@ -16312,10 +16312,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/18740af5-bcec-3773-bd3c-059e0fc65703-c61dfcf7-bfb0-374b-98d9-2de12f9be26a",
+          "@id": "http://williamrobertfunk.com/instance/Country/18740af5-bcec-3773-bd3c-059e0fc65703-1b2f7291-f537-3784-86ac-0af3c521a6bb",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Vice President (Eritrea)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Vice President  (Eritrea)",
           "objectProperties": [          ]
         }
       }, 
@@ -16456,10 +16456,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/18740af5-bcec-3773-bd3c-059e0fc65703-ac9ce379-774f-3696-bafd-b26d99480dee",
+          "@id": "http://williamrobertfunk.com/instance/Country/18740af5-bcec-3773-bd3c-059e0fc65703-1a9174f1-ab2d-3e4f-8144-1b3532d49d47",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Minister of Trade & Industry (Eritrea)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Minister of Trade & Industry  (Eritrea)",
           "objectProperties": [          ]
         }
       }, 
@@ -16899,10 +16899,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/16cc7f84-3a3e-3bc1-95ff-6fa1925826e7-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/16cc7f84-3a3e-3bc1-95ff-6fa1925826e7-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Eswatini)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Eswatini)",
           "objectProperties": [          ]
         }
       }
@@ -21000,10 +21000,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/bc88a240-30a1-3bde-a13c-8749ed93d30e-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/bc88a240-30a1-3bde-a13c-8749ed93d30e-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Guyana)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Guyana)",
           "objectProperties": [          ]
         }
       }
@@ -27502,10 +27502,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/93295b0c-76b9-32da-b60a-8e0f2e9a29a1-c50ae086-a287-3729-9d9e-03f65c844290",
+          "@id": "http://williamrobertfunk.com/instance/Country/93295b0c-76b9-32da-b60a-8e0f2e9a29a1-b06496bc-5e84-3773-ba55-a889aa1328a3",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Deputy Prime Minister for Economic Affairs (Kuwait)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Deputy Prime Minister for Economic Affairs  (Kuwait)",
           "objectProperties": [          ]
         }
       }, 
@@ -27754,10 +27754,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/93295b0c-76b9-32da-b60a-8e0f2e9a29a1-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/93295b0c-76b9-32da-b60a-8e0f2e9a29a1-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Kuwait)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Kuwait)",
           "objectProperties": [          ]
         }
       }
@@ -29526,10 +29526,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/b0ddce0f-54c9-36c1-8611-7e280aead4f9-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/b0ddce0f-54c9-36c1-8611-7e280aead4f9-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Liechtenstein)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Liechtenstein)",
           "objectProperties": [          ]
         }
       }
@@ -31044,10 +31044,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/213cb204-5092-36ff-aaed-eca9290b70a6-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/213cb204-5092-36ff-aaed-eca9290b70a6-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Maldives)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Maldives)",
           "objectProperties": [          ]
         }
       }
@@ -32689,10 +32689,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/5990a835-34fb-3b2b-91fa-6b17a6a0bc5b-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/5990a835-34fb-3b2b-91fa-6b17a6a0bc5b-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Micronesia, Federated States of)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Micronesia, Federated States of)",
           "objectProperties": [          ]
         }
       }
@@ -32970,10 +32970,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/35ab1c3d-e6da-3348-8016-54e1ebf5dd93-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/35ab1c3d-e6da-3348-8016-54e1ebf5dd93-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Monaco)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Monaco)",
           "objectProperties": [          ]
         }
       }
@@ -34090,10 +34090,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/a40a9be0-0a9a-3b56-acd6-7011c0d96758-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/a40a9be0-0a9a-3b56-acd6-7011c0d96758-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Mozambique)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Mozambique)",
           "objectProperties": [          ]
         }
       }
@@ -41621,10 +41621,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/3ad2dd82-9664-3a6f-a9ae-c0770e244c17-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/3ad2dd82-9664-3a6f-a9ae-c0770e244c17-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Saint Kitts and Nevis)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Saint Kitts and Nevis)",
           "objectProperties": [          ]
         }
       }
@@ -41793,10 +41793,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/673b1cf8-63c8-32d1-8109-731b098b19ba-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/673b1cf8-63c8-32d1-8109-731b098b19ba-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Saint Lucia)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Saint Lucia)",
           "objectProperties": [          ]
         }
       }
@@ -42345,10 +42345,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/87fd3bef-cce6-3242-a18f-49ec496c2b09-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/87fd3bef-cce6-3242-a18f-49ec496c2b09-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (San Marino)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (San Marino)",
           "objectProperties": [          ]
         }
       }
@@ -42860,10 +42860,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/6f49c311-92f5-3a1e-9053-a1d699956998-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/6f49c311-92f5-3a1e-9053-a1d699956998-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Saudi Arabia)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Saudi Arabia)",
           "objectProperties": [          ]
         }
       }
@@ -44558,10 +44558,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/b6c149c3-e004-37fb-a347-629a63ed02fe-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/b6c149c3-e004-37fb-a347-629a63ed02fe-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Slovakia)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Slovakia)",
           "objectProperties": [          ]
         }
       }
@@ -45362,10 +45362,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/4dfdf195-ecb7-3a3f-a837-88deca6fd3b2-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/4dfdf195-ecb7-3a3f-a837-88deca6fd3b2-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Somalia)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Somalia)",
           "objectProperties": [          ]
         }
       }
@@ -47285,10 +47285,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/b17fc6f0-5c07-3b63-928a-6d19c2abe091-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/b17fc6f0-5c07-3b63-928a-6d19c2abe091-76e75618-cb73-3604-a9a9-c5f37049e72b",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Suriname)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York     (Suriname)",
           "objectProperties": [          ]
         }
       }
@@ -48053,19 +48053,19 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/3ed10433-7eb1-3fb7-9010-7978743cbf25-6be591cc-c052-3211-abc2-da0c18699ea8",
+          "@id": "http://williamrobertfunk.com/instance/Country/3ed10433-7eb1-3fb7-9010-7978743cbf25-92643dfc-8f56-3392-9a14-ae1ee4afdbc7",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Ambassador to the US (Syria)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Ambassador to the US  (Syria)",
           "objectProperties": [          ]
         }
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/3ed10433-7eb1-3fb7-9010-7978743cbf25-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/3ed10433-7eb1-3fb7-9010-7978743cbf25-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Syria)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Syria)",
           "objectProperties": [          ]
         }
       }
@@ -50591,10 +50591,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/edf404d0-db32-372d-81a2-9b428a804405-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/edf404d0-db32-372d-81a2-9b428a804405-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Tunisia)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Tunisia)",
           "objectProperties": [          ]
         }
       }
@@ -51115,10 +51115,10 @@
       }, 
       {
         "http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice": {
-          "@id": "http://williamrobertfunk.com/instance/Country/1f8dc1a6-076e-32fb-b1ef-a48a19e2d220-dd6a30b5-0851-3f4e-bad2-037c6740a265",
+          "@id": "http://williamrobertfunk.com/instance/Country/1f8dc1a6-076e-32fb-b1ef-a48a19e2d220-2c218fb1-7741-3b7c-8731-360a47d90f40",
           "@type": "http://williamrobertfunk.com/ontologies/world-leaders#GovernmentOffice",
           "datatypeProperties": {},
-          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York (Turkmenistan)",
+          "http://www.w3.org/2000/01/rdf-schema#label": "The Office of Permanent Representative to the UN, New York  (Turkmenistan)",
           "objectProperties": [          ]
         }
       }

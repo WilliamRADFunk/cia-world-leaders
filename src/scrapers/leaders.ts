@@ -16,7 +16,7 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 	}
 	
 	cheerioElem('#countryOutput ul li #chiefsOutput > div').each((index: number, element: CheerioElement) => {
-		const personName = cheerioElem(element.lastChild).find('span > span').text();
+		const personName = cheerioElem(element.lastChild).find('span > span').text().trim();
 		const officeName = cheerioElem(element).find('div > span > span').text()
 			.replace(personName, '')
 			.replace('Min.-Del.', 'Minister-Delegate')
@@ -75,11 +75,10 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 		if (personName) {
 			const personNameDelimited = personName.trim().split(' ');
 			let lastNameIndex = 0;
-			const regExp = new RegExp('[A-Z]');
+			const regExp = new RegExp('[A-Z]{2,}');
 			personNameDelimited.forEach((val: string, index: number) => {
-				// TODO: Find cleaner way to achieve this last name parsing.
-				// TODO: Handle Last names with apostrophes. ie. D'ANGELO
-				if (!lastNameIndex && val && val.charAt(0).match(regExp) && val.charAt(1).match(regExp)) {
+				const isMatch = val && val.match(regExp);
+				if (!lastNameIndex && isMatch) {
 					lastNameIndex = index;
 				}
 			});
@@ -101,6 +100,7 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			}
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_FIRST_NAME] = firstName;
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_LAST_NAME] = lastName;
+			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_NAME] = personName;
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].objectProperties.push(
 				entityRefMaker(
 					consts.ONTOLOGY.HAS_APPOINTED_GOVERNMENT_OFFICE,
