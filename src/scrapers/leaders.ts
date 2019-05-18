@@ -74,11 +74,11 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 		// Parse name into first and last based on apparent pattern where last name is always all caps.
 		if (personName) {
 			const personNameDelimited = personName.trim().split(' ');
-			let lastNameIndex = 0;
+			let lastNameIndex = -1;
 			const regExp = new RegExp('[A-Z]{2,}');
 			personNameDelimited.forEach((val: string, index: number) => {
 				const isMatch = val && val.match(regExp);
-				if (!lastNameIndex && isMatch) {
+				if (lastNameIndex === -1 && isMatch) {
 					lastNameIndex = index;
 				}
 			});
@@ -98,9 +98,12 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 					`${personName}`);
 				store.persons[personId] = perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL];
 			}
-			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_FIRST_NAME] = firstName;
-			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_LAST_NAME] = lastName;
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_NAME] = personName;
+			// For cases like Queen ELIZABETH II, dispense with first and last name. Use only name.
+			if (lastNameIndex > 0) {
+				perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_FIRST_NAME] = firstName;
+				perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_LAST_NAME] = lastName;
+			}
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].objectProperties.push(
 				entityRefMaker(
 					consts.ONTOLOGY.HAS_APPOINTED_GOVERNMENT_OFFICE,
