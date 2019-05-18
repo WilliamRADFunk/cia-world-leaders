@@ -101,6 +101,12 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			}
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_FIRST_NAME] = firstName;
 			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].datatypeProperties[consts.ONTOLOGY.DT_LAST_NAME] = lastName;
+			perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL].objectProperties.push(
+				entityRefMaker(
+					consts.ONTOLOGY.HAS_APPOINTED_GOVERNMENT_OFFICE,
+					govObjectProp,
+					consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE)
+			);
 			store.govOffices[officeId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL, perObjectProp));
 		}		
     });
