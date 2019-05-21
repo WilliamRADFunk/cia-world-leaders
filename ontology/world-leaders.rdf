@@ -22,7 +22,7 @@
   xmlns:blade="http://modusoperandi.com/ont/blade#">
 
   <Ontology rdf:about="http://williamrobertfunk.com/ontologies/world-leaders">
-    <versionInfo rdf:datatype="&xsd;decimal">1.0</versionInfo>
+    <versionInfo rdf:datatype="&xsd;decimal">1.1</versionInfo>
     <dc:rights>Copyright 2019 William R.A.D. Funk. All rights reserved.</dc:rights>
     <dc:creator>William R.A.D. Funk</dc:creator>
     <dc:contributor>William R.A.D. Funk</dc:contributor>
@@ -69,6 +69,16 @@
   //
   ///////////////////////////////////////////////////////////////////////////////////////
   -->
+  
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#appointedGovernmentOffice -->
+
+  <ObjectProperty rdf:about="&wleaders;appointedGovernmentOffice">
+    <rdfs:comment>
+      a government office to which this person is appointed.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="&wleaders;Person"/>
+    <rdfs:range rdf:resource="&wleaders;GovernmentOffice"/>
+  </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice -->
 
@@ -86,15 +96,14 @@
     <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
     <rdfs:range rdf:resource="&wleaders;Person"/>
   </ObjectProperty>
-  
-  <!-- http://williamrobertfunk.com/ontologies/world-leaders#appointedGovernmentOffice -->
 
-  <ObjectProperty rdf:about="&wleaders;appointedGovernmentOffice">
-    <rdfs:comment>
-      a government office to which this person is appointed.
-    </rdfs:comment>
-    <rdfs:domain rdf:resource="&wleaders;Person"/>
-    <rdfs:range rdf:resource="&wleaders;GovernmentOffice"/>
+  <!-- Object Properties that add onto world-factbook ontology -->
+
+  <!-- http://williamrobertfunk.com/ontologies/world-factbook#hasCountry -->
+
+  <ObjectProperty rdf:about="&wfact;hasCountry">
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
+    <rdfs:range rdf:resource="&wfact;Country"/>
   </ObjectProperty>
 
   <!--
@@ -105,18 +114,6 @@
   ///////////////////////////////////////////////////////////////////////////////////////
   -->
 
-  <!-- http://williamrobertfunk.com/ontologies/world-leaders#title -->
-
-  <DatatypeProperty rdf:about="&wleaders;title">
-    <rdfs:label>Title</rdfs:label>
-    <rdfs:comment>
-      The official name of the government office
-    </rdfs:comment>
-    <rdf:type rdf:resource="&owl;FunctionalProperty" />
-    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
-    <rdfs:range rdf:resource="&xsd;string"/>
-  </DatatypeProperty>
-
   <!-- http://williamrobertfunk.com/ontologies/world-leaders#regionSpecific -->
 
   <DatatypeProperty rdf:about="&wleaders;regionSpecific">
@@ -124,6 +121,18 @@
     <rdfs:comment>
       Specific Region to which the government office applies
       (ie. "Chief Executive" in China for Hong Kong, or Macau).
+    </rdfs:comment>
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </DatatypeProperty>
+
+  <!-- http://williamrobertfunk.com/ontologies/world-leaders#title -->
+
+  <DatatypeProperty rdf:about="&wleaders;title">
+    <rdfs:label>Title</rdfs:label>
+    <rdfs:comment>
+      The official name of the government office
     </rdfs:comment>
     <rdf:type rdf:resource="&owl;FunctionalProperty" />
     <rdfs:domain rdf:resource="&wleaders;GovernmentOffice"/>

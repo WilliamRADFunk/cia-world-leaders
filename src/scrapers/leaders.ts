@@ -79,11 +79,17 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 				`The Office of ${officeName} (${country})`);
 			store.govOffices[officeId] = govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE];
 		}
-		govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE].datatypeProperties[consts.ONTOLOGY.DT_TITLE] = officeName;
+		store.govOffices[officeId].datatypeProperties[consts.ONTOLOGY.DT_TITLE] = officeName;
 		// Only add the region specific ontological note if there was one. Most countries don't have any.
 		if (specificRegion) {
-			govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE].datatypeProperties[consts.ONTOLOGY.DT_REGION_SPECIFIC] = specificRegion;
+			store.govOffices[officeId].datatypeProperties[consts.ONTOLOGY.DT_REGION_SPECIFIC] = specificRegion;
 		}
+		store.govOffices[officeId].objectProperties.push(
+			entityRefMaker(
+				consts.ONTOLOGY.HAS_COUNTRY,
+				store.countries,
+				countryId
+		));
 		store.countries[countryId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE, govObjectProp));
 
 		// Parse name into first and last based on apparent pattern where last name is always all caps.
