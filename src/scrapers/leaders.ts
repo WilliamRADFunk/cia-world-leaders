@@ -91,10 +91,10 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			const personNameDelimited = personName.trim().split(' ');
 			let lastNameIndex = -1;
 			const regExp = new RegExp('[A-Z]{2,}');
-			personNameDelimited.forEach((val: string, index: number) => {
+			personNameDelimited.forEach((val: string, i: number) => {
 				const isMatch = val && val.match(regExp);
 				if (lastNameIndex === -1 && isMatch) {
-					lastNameIndex = index;
+					lastNameIndex = i;
 				}
 			});
 			const firstName = personNameDelimited.slice(0, lastNameIndex).join(' ');
