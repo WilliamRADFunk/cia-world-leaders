@@ -15,6 +15,7 @@
     "copy:owl": "copyfiles -u 1 ontology/*.rdf dist/ontology/owl/",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
+    "postbuild": "copyfiles -u 1 ontology/*.rdf lib/ontology/owl/",
     "scrape": "ts-node src/index.ts",
     "start": "run-s clean:logs clean:dist scrape copy:ontology",
     "test": "echo \"Error: no test specified\" && exit 1",
