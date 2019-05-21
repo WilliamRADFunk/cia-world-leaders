@@ -22,7 +22,7 @@ export function getCountries(): any {
             store.countriesInList.push(...cNames);
 
             store.countriesInList.forEach(country => {
-                const id: string = countryToId(country.name);
+                const id: string = countryToId(country.isoCode);
                 store.countries[id] = entityMaker(
                     consts.ONTOLOGY.HAS_COUNTRY,
                     consts.ONTOLOGY.ONT_COUNTRY,
