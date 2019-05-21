@@ -67,7 +67,7 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			return;
 		}
 		// Fetch or create office entity
-		const officeId = consts.ONTOLOGY.INST_COUNTRY + getUuid(country) + '-' + getUuid(officeName);
+		const officeId = consts.ONTOLOGY.INST_GOVERNMENT_OFFICE + getUuid(country) + '-' + getUuid(officeName);
 		let govObjectProp = {};
 		if (!!store.govOffices[officeId]) {
 			govObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE] = store.govOffices[officeId];
@@ -107,7 +107,7 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 			const lastName = personNameDelimited.slice(lastNameIndex).join(' ');
 
 			// If name present fetch or create the associated entity
-			const personId = consts.ONTOLOGY.INST_COUNTRY + getUuid(country) + '-' + getUuid(personName);
+			const personId = consts.ONTOLOGY.INST_PERSON + getUuid(country) + '-' + getUuid(personName);
 			let perObjectProp = {};
 			if (!!store.persons[personId]) {
 				perObjectProp[consts.ONTOLOGY.HAS_GOVERNMENT_OFFICIAL] = store.persons[personId];
