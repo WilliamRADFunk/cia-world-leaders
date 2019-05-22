@@ -14,7 +14,7 @@ export function getCountryData(country: CountryReference, url: string): any {
                 const $ = cheerio.load(html);
                 const countryId = countryToId(country.isoCode);
                 dataScrapers.getLeaders($, country.name, countryId);
-                store.debugLogger(`Data scrape for ${country.name} is complete`);
+                store.debugLogger(` World Leader data scrape for ${country.name} is complete`);
             })
             .catch((err: Response) => {
                 let errMsg;
