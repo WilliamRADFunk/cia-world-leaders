@@ -4,6 +4,7 @@ import { consts } from '../constants/constants';
 import { store } from '../constants/globalStore';
 import { entityMaker } from '../utils/entity-maker';
 import { entityRefMaker } from '../utils/entity-ref-maker';
+import { getRelation } from '../utils/get-objectProperty';
 
 export function getLeaders(cheerioElem: CheerioSelector, country: string, countryId: string) {
 	// Checking to see if country has the section needed before continuing.
@@ -84,12 +85,16 @@ export function getLeaders(cheerioElem: CheerioSelector, country: string, countr
 		if (specificRegion) {
 			store.govOffices[officeId].datatypeProperties[consts.ONTOLOGY.DT_REGION_SPECIFIC] = specificRegion;
 		}
-		store.govOffices[officeId].objectProperties.push(
-			entityRefMaker(
-				consts.ONTOLOGY.HAS_COUNTRY,
-				store.countries,
-				countryId
-		));
+		const objectProperties = store.govOffices[officeId].objectProperties;
+		const hasCountryRef = getRelation(objectProperties, consts.ONTOLOGY.HAS_COUNTRY);
+		if (!hasCountryRef) {
+			store.govOffices[officeId].objectProperties.push(
+				entityRefMaker(
+					consts.ONTOLOGY.HAS_COUNTRY,
+					store.countries,
+					countryId
+			));
+		}
 		store.countries[countryId].objectProperties.push(entityRefMaker(consts.ONTOLOGY.HAS_GOVERNMENT_OFFICE, govObjectProp));
 
 		// Parse name into first and last based on apparent pattern where last name is always all caps.
