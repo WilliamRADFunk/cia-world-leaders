@@ -16,6 +16,7 @@ const BASE = {
 const ONTOLOGY = {
 	// Ontology definition paths for (predicate) datatype properties
 	DT_FIRST_NAME: FOAF_ONT_PATH + 'firstName',
+	DT_GEC_CODE: MAIN_ONT_PATH + 'countryCodeGEC',
 	DT_ISO_CODE: COUNTRY_ONT_PATH + 'countryCodeISO',
 	DT_LAST_NAME: FOAF_ONT_PATH + 'lastName',
 	DT_NAME: FOAF_ONT_PATH + 'name',
