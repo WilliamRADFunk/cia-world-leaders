@@ -7,4 +7,7 @@ export function flushStore() {
 	store.failedCountries = [];
 	store.govOffices = {};
 	store.persons = {};
+	
+	store.jsonLD = [];
+	store.jsonNT = '';
 };

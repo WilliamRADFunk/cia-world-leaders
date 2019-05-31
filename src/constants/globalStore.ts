@@ -1,5 +1,4 @@
-import { CountryReference } from "../models/country-reference";
-import { EntityListWrapper } from "../models/entity-list-wrapper";
+import { CountryReference, EntityListWrapper, FlatEntity } from "funktologies";
 import { consoleError, consoleLog } from "../utils/logger";
 
 // const noop = () => { /* Noop */ };
@@ -14,6 +13,8 @@ class GlobalStore {
 	public errorLogger: any = consoleError;
 	public progressLogger: any = noop;
 	public failedCountries: CountryReference[] = [];
+	public jsonLD: FlatEntity[] = [];
+	public jsonNT: string = '';
 
 	public countries: EntityListWrapper = {};
 	public govOffices: EntityListWrapper = {};
