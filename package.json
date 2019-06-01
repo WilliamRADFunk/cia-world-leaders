@@ -1,6 +1,6 @@
 {
   "name": "cia-world-leaders",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Serves as an independent data scraping module, complete with ontology and full scraping ability for the CIA World Leaders site",
   "main": "lib/api.js",
   "scripts": {
@@ -57,7 +57,7 @@
     "cheerio": "^1.0.0-rc.2",
     "copyfiles": "^2.1.0",
     "formatter-json": "^0.1.1",
-    "funktologies": "^0.1.0",
+    "funktologies": "^0.1.1",
     "html-to-text": "^4.0.0",
     "image-downloader": "^3.4.2",
     "log4js": "^4.1.0",
