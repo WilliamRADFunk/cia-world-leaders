@@ -82,6 +82,7 @@
     "qs": "^1.2.2",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",
+    "tunnel-agent": "^0.6.0",
     "typings": "^2.1.1"
   }
 }
